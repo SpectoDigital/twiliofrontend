@@ -1,12 +1,77 @@
-# React + Vite
+# 📞 Twilio Web Dialer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Un marcador web moderno que permite realizar llamadas reales desde el navegador usando **Twilio Client JS**, WebRTC, **React + Vite**, y estilo con **TailwindCSS** y animaciones con **Framer Motion**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🧠 Tecnologías usadas
 
-## Expanding the ESLint configuration
+- ✅ React + Vite
+- 🎨 TailwindCSS + Framer Motion
+- 📞 Twilio Client JS (Voice SDK)
+- 🌐 Zustand para manejo de estado
+- 🔐 Backend Express + Twilio SDK
+- 🌍 Render (backend) + Vercel (frontend)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 Cómo correrlo localmente
+
+### 1. Clona este repo
+
+```bash
+git clone https://github.com/tu-usuario/twilio-web-dialer.git
+cd twilio-web-dialer
+```
+
+### 2. Instala las dependencias
+
+```bash
+npm install
+```
+
+### 3. Crea un archivo `.env` con la URL del backend:
+
+```env
+VITE_BACKEND_URL=https://tu-backend-en-render.com
+```
+
+### 4. Ejecutá el frontend
+
+```bash
+npm run dev
+```
+
+---
+
+## 🔧 Backend necesario
+
+Este frontend requiere un backend Express que:
+
+- Genere tokens para el cliente Twilio.
+- Administre llamadas entrantes y salientes.
+- Tenga las siguientes rutas:
+
+```
+GET    /token
+POST   /incoming
+POST   /recording
+POST   /make-call
+```
+
+> Repositorio recomendado para el backend: [twilioapp-backend](https://github.com/tu-usuario/twilioapp-backend)
+
+---
+
+## 📷 Vista previa
+
+![UI Preview](./preview.png)
+
+---
+
+## 💬 Comentarios
+
+> Este proyecto fue construido con 💚 y un montón de bugs en el camino. ¡Pero funciona!
+
+Con cariño,  
+**Milton**
